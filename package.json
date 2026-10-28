@@ -1,0 +1,28 @@
+{
+  "name": "reels-generator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local generator for vertical Indonesian educational videos (Remotion)",
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts ReelsVideo out/reel.mp4 --props=content/default.json",
+    "still": "remotion still src/index.ts DockerWhiteboard out/still-whiteboard.png --frame=90 && remotion still src/index.ts DockerPresenter out/still-presenter.png --frame=240 && remotion still src/index.ts DockerCode out/still-code.png --frame=240",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "render:whiteboard": "remotion render src/index.ts DockerWhiteboard out/docker-whiteboard.mp4",
+    "render:presenter": "remotion render src/index.ts DockerPresenter out/docker-presenter.mp4",
+    "render:code": "remotion render src/index.ts DockerCode out/docker-code.mp4",
+    "render:all": "npm run render:whiteboard && npm run render:presenter && npm run render:code"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.539",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.539"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.2",
+    "typescript": "5.9.3",
+    "vitest": "3.2.4"
+  }
+}

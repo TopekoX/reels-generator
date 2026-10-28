@@ -1,0 +1,30 @@
+{
+  "style": "whiteboard",
+  "title": "Apa itu Docker?",
+  "subtitle": "Container dalam 24 detik",
+  "introImage": "assets/container.svg",
+  "points": [
+    {
+      "text": "Docker membungkus aplikasi beserta kebutuhannya dalam satu container.",
+      "caption": "Aplikasi + kebutuhannya = satu paket",
+      "image": "assets/container.svg",
+      "code": "FROM node:22\nCOPY . /app\nCMD [\"node\", \"app.js\"]",
+      "codeTitle": "Dockerfile"
+    },
+    {
+      "text": "Container berjalan sama di laptop, server, dan cloud.",
+      "caption": "Tidak ada lagi \"di laptop saya jalan\"",
+      "image": "assets/laptop.svg",
+      "code": "docker build -t myapp .",
+      "codeTitle": "Terminal"
+    },
+    {
+      "text": "Satu perintah cukup untuk menjalankannya.",
+      "caption": "Jalankan dengan docker run",
+      "code": "docker run -p 3000:3000 myapp",
+      "codeTitle": "Terminal"
+    }
+  ],
+  "outro": "Ikuti untuk belajar teknologi lainnya!",
+  "durationSeconds": 24
+}
